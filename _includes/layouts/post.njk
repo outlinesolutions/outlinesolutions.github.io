@@ -1,0 +1,77 @@
+---
+layout: layouts/base.njk
+---
+<div class="p-8 max-w-2xl mx-auto grid">
+    <div class="">
+        <div class="grid gap-8">
+            <h1 class="font-semibold text-4xl text-center">{{ title }}</h1>
+            <div class="text-center bg-gradient-to-r from-violet-100/50 to-cyan-50/50 p-8 rounded-md w-full min-h-sm">
+                <p class="text-slate-600">{{ description }}</p>
+            </div>
+        </div>
+        {# 
+        <ul class="post-metadata grid grid-flow-col justify-start gap-2">
+            <li>
+                <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+            </li>
+            {%- for tag in tags | filterTagList %}
+                {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+                <li>
+                    <a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>
+                    {%- if not loop.last %}  -{% endif %}
+                </li>
+            {%- endfor %}
+        </ul> #}
+
+        <div class="prose mx-auto my-12 w-full ">
+            {{ content | safe }}
+        </div>
+    </div>
+    <div class="grid gap-4 bg-gradient-to-r p-8 rounded-lg from-violet-100/50 to-cyan-50/50 border border-slate-800 ">
+
+        <h2 class="text-2xl font-semibold">Hire an expert to take your business to the next level</h2>
+        <p class="h-full">Get in touch with us to discuss your project and how we can help you achieve your goals.</p>
+        <div class="flex">
+
+            <a href="/#contact" class="transition-all rounded-lg hover:ring-2 ring-slate-800 ring-offset-2 px-4 py-2 bg-slate-800 text-slate-50">Contact Us</a>
+
+        </div>
+    </div>
+</div>
+
+{# {%- if collections.posts %}
+        {%- set previousPost = collections.posts | getPreviousCollectionItem %}
+        {%- set nextPost = collections.posts | getNextCollectionItem %}
+        {%- if nextPost or previousPost %}
+            <div class="w-full grid grid-flow-col justify-between gap-12">
+                {%- if previousPost %}
+                    <a href="{{ previousPost.url }}" class="underline underline-offset-4 flex items-center text-gray-600 font-medium text-sm hover:text-slate-800 mt-auto">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mr-2 rotate-180 w-4 h-4">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                        {{ previousPost.data.title }}
+
+                    </a>
+                {% endif %}
+                {%- if nextPost %}
+                    <a href="{{ nextPost.url }}" class="underline underline-offset-4 flex items-center text-gray-600 font-medium text-sm hover:text-slate-800 mt-auto">
+                        {{ nextPost.data.title }}
+
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="ml-2 w-4 h-4">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+
+                    </a>
+                {% endif %}
+            </div>
+        {%- endif %}
+    {%- endif %} #}
+
+{# {% for post in collections['tag'] %}
+        <div class="post-preview">
+            <h2 class="post-title">
+                <a href="{{ post.url }}">{{ post.data.title }}</a>
+            </h2>
+            <p class="post-excerpt">{{ post.templateContent | striptags | truncate(140) }}</p>
+        </div>
+    {% endfor %} #}

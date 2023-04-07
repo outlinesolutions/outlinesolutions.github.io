@@ -1,0 +1,15 @@
+<section class="grid  w-full">
+    <dl class="grid gap-4">
+        {% for faq in faqs %}
+            <div x-data="{open: false}" @click="open = !open" x-transition class=" px-4 border-slate-300 border-l transition-all cursor-pointer">
+                <dt class="flex justify-between items-center w-full">
+                    <h4 class="text-lg ">{{ faq.title }}</h4>
+                </dt>
+                <dd x-show="open" class="mt-2 text-slate-700 text-sm">
+                    {{ faq.content| safe  }}
+                </dd>
+            </div>
+        {% endfor %}
+
+    </dl>
+</section>

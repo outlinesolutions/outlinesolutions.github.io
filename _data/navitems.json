@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Solutions",
+    "url": "/#solutions",
+    "highlight": false
+  },
+  {
+    "title": "Blog",
+    "url": "/blog",
+    "highlight": false
+  },
+  {
+    "title": "Contact Us",
+    "url": "/#contact",
+    "highlight": true
+  }
+]

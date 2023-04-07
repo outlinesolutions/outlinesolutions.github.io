@@ -1,0 +1,25 @@
+[
+  {
+    "title": "Web Application Development",
+    "description": "We can develop web-based applications that are accessible from any device and help automate your business processes, making them more efficient and scalable.",
+    "slug": "web-application-development",
+    "cta": {
+      "text": "Learn More",
+      "url": "/solutions/web-development"
+    },
+    "img": {
+      "src": "abstract-wireframe.jpg",
+      "alt": "Web Application Development"
+    },
+    "resources": [
+      {
+        "text": "Benefits of Custom Web Applications",
+        "url": "/blog/benefits-of-custom-development"
+      },
+      {
+        "text": "Determining if Custom Development is Right for You",
+        "url": "/blog/determining-if-custom-development-is-right-for-you"
+      }
+    ]
+  }
+]

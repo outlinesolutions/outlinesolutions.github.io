@@ -1,0 +1,51 @@
+<section class="">
+    {% for solution in primarysolutions %}
+        <div class="border hover:border-solid transition-all border-slate-800 shadow rounded p-4 py-6 md:grid md:grid-cols-3 gap-y-8  ">
+            <div class="col-span-2  grid gap-2">
+                <h2 class="text-3xl font-bold">{{solution.title}}</h2>
+                <p class="text-lg">{{solution.description}}</p>
+
+                <a href="{{solution.cta.url}}" class="tracking-wider underline-offset-4 flex items-center text-slate-600 font-medium hover:text-slate-800 hover:font-medium hover:underline">{{solution.cta.text}}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="ml-1 w-5 h-5">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <div class="flex flex-col border-l border-slate-600 pl-4 mt-2">
+                    <h4 class="text-xl font-semibold">Resources</h4>
+                    {% for resource in solution.resources %}
+                        <a href="{{resource.url}}" class="text-sm my-1 hover:underline underline-offset-2  inline-flex items-center text-slate-500 font-medium hover:text-slate-800">
+                            <span class="">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </span>
+                            <span class="ml-2">{{resource.text}}</span>
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="h-full max-w-sm mt-5 md:mt-0 rounded-lg overflow-hidden place-self-center">
+                {% image solution.img.src, solution.img.alt%}
+            </div>
+        </div>
+    {% endfor %}
+
+    <div class="w-full grid gap-4 md:grid-cols-3 items-start my-4">
+        {% for solution in secondarysolutions%}
+            <div class="flex flex-col h-full border border-slate-800 border-dotted hover:border-solid transition-all shadow rounded p-4">
+                <h2 class="text-xl font-semibold">{{ solution.title }}</h2>
+                <p class="text-normal">{{ solution.description }}</p>
+                <a href="{{solution.cta.url}}" class="underline underline-offset-4 flex items-center text-gray-600 font-medium text-sm hover:text-slate-800 mt-auto" x-data="{ show: false }" x-on:mouseover="show = true" x-on:mouseleave="show = false">{{solution.cta.text}}
+                    <svg x-show="show" x-transition xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="ml-1 w-4 h-4">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <div class="bg-gradient-to-r rounded-md w-24 h-24 mt-4 p-8 flex {{solution.gradient}}">
+                    {% image solution.icon, 'abstract icon'%}
+                </div>
+            </div>
+
+        {% endfor %}
+    </div>
+</section>

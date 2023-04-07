@@ -1,0 +1,80 @@
+{% extends "_includes/layouts/base.njk" %}
+
+{% block title %}Outline Solutions{% endblock %}
+
+{% block content %}
+    <div class="w-full grid justify-center p-8">
+        <div class="font-extrabold text-2xl md:text-4xl tracking-wide mx-auto p-8 py-16 md:py-32 mb-12 bg-slate-800 text-sky-50	">
+            <p>
+                <span class="font-normal">
+                We create user-friendly and affordable software to simplify complex processes and workflows.
+                </span>
+                <span>Helping small to mid-sized businesses stay organized and efficient.</span>
+            </p>
+        </div>
+    </div>
+
+    <div class="m-8 grid gap-24">
+        <div class="rounded grid gap-8" id="solutions">
+            <div>
+                <h2 class="font-thinner tracking-wider flex w-full">
+                    <div class="text-4xl">Solutions</div>
+                    <span class="border-b-4 border-slate-800 ml-2 flex-grow mb-2"></span>
+                </h2>
+                <div class="font-thin flex w-full">
+                    {# <div class="text-4xl text-transparent">Solutions</div> #}
+                    <p class="t font-thin flex-grow ">We offer a wide range of software solutions to help local businesses thrive. Whether you're looking for a custom software solution or a pre-built solution, we can help.</p>
+                </div>
+            </div>
+            <div class="">
+                {% include 'solutions.njk'%}
+            </div>
+        </div>
+
+        <div class="rounded grid gap-4" id="process">
+            <div>
+                <h2 class="font-thinner tracking-wider flex w-full">
+                    <div class="text-4xl">Process</div>
+                    <span class="border-b-4 border-slate-800 ml-2 flex-grow mb-2"></span>
+                </h2>
+                <div class="font-thin flex w-full">
+                    <p class="t font-thin flex-grow ">At its core, our relationship is split into 6 phases. Each phase has a clear goal and is designed to make progress towards answering big questions and validating big ideas. Each phase is flexible and there is lots of room to experiment with different techniques.</p>
+                </div>
+            </div>
+            <div class="">
+                {% include 'tabs.njk'%}
+            </div>
+        </div>
+
+        <div class="rounded grid gap-4" id="faq">
+            <div>
+                <h2 class="font-thinner tracking-wider flex w-full">
+                    <div class="text-4xl">FAQ</div>
+                    <span class="border-b-4 border-slate-800 ml-2 flex-grow mb-2"></span>
+                </h2>
+                <div class="font-thin flex w-full">
+                    <p class="t font-thin flex-grow ">If you have a question that isn't answered here, please feel free to contact us.</p>
+                </div>
+            </div>
+            <div class="">
+                {% include 'faqs.njk'%}
+            </div>
+        </div>
+
+        <div class="rounded grid gap-4" id="faq">
+            <div>
+                <h2 class="font-thinner tracking-wider flex w-full">
+                    <div class="text-4xl">Contact</div>
+                    <span class="border-b-4 border-slate-800 ml-2 flex-grow mb-2"></span>
+                </h2>
+                <div class="font-thin flex w-full">
+                    <p class="t font-thin flex-grow ">Get in touch with us to discuss your project and how we can help you achieve your goals.</p>
+                </div>
+            </div>
+            <div class="">
+                {% include 'contact.njk'%}
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

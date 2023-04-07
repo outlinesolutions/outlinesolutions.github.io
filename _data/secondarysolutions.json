@@ -1,0 +1,35 @@
+[
+  {
+    "title": "IT Consulting",
+    "description": "We can provide you with expert advice on how to optimize your existing IT infrastructure, recommend new software solutions, and help you integrate your systems for maximum efficiency.",
+    "slug": "it-consulting",
+    "cta": {
+      "text": "Learn More",
+      "url": "/solutions/it-consulting"
+    },
+    "gradient": "from-amber-100/50 to-yellow-200/50",
+    "icon": "it.svg"
+  },
+  {
+    "title": "Cloud-Based Solutions",
+    "description": "We can help you move your existing applications and data to the cloud, providing you with enhanced security, scalability, and flexibility.",
+    "slug": "cloud-based-solutions",
+    "cta": {
+      "text": "Learn More",
+      "url": "/solutions/cloud-based-solutions"
+    },
+    "gradient": "from-blue-100/50 to-cyan-200/50",
+    "icon": "cloud.svg"
+  },
+  {
+    "title": "Marketing Websites",
+    "description": "We can help you create a marketing site with custom design and copy addressing your unique brand, audience and messaging goals.",
+    "slug": "marketing-sites",
+    "cta": {
+      "text": "Learn More",
+      "url": "/solutions/marketing-sites"
+    },
+    "gradient": "from-violet-100/50 to-pink-200/50",
+    "icon": "marketing.svg"
+  }
+]

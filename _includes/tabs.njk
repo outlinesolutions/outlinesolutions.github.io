@@ -1,0 +1,57 @@
+<section x-data="{ 
+    ts: ['discovery','development', 'testing', 'launch', 'maintenance'],
+    current: ''
+    }"
+    x-init="current = $data.ts.includes(window.location.hash.substring(1)) ? window.location.hash.substring(1) : $data.ts[0]"
+    class="w-full flex flex-wrap justify-between">
+    {% for tab in tabs %}
+        <a class="w-full md:w-1/6 md:items-center mt-4 flex flex-col pb-4 border-b-4  hover:border-b-slate-800 transition-all " x-bind:class="current === '{{tab.slug}}' ? 'border-b-slate-800' : 'border-b-transparent'" @click.prevent="current = '{{tab.slug}}'; window.location.hash = '{{tab.slug}}'" href="#" id="'{{tab.slug}}'">
+            <div class="text-left">
+                <h3 class="font-medium text-sm tracking-wide text-slate-600">Phase {{tab.number}}</h3>
+                <h3 class="text-xl font-semibold">{{tab.title}}</h3>
+            </div>
+        </a>
+        <div x-show="current === '{{tab.slug}}'" class="my-5 grid grid-cols-1 md:grid-cols-3 md:gap-4 md:order-1 w-full"
+        x-transition:enter="transition ease-in duration-300"
+        x-transition:enter-start="opacity-0 scale-90"
+        x-transition:enter-end="opacity-100 scale-100"
+        >
+
+            <div class="col-span-3 border hover:border-solid transition-all border-slate-800 shadow rounded p-4 py-6 md:grid md:grid-cols-3 gap-8  ">
+                <div class="col-span-2  grid gap-2">
+                    <h2 class="text-3xl font-bold">Overview of {{tab.title}}</h2>
+                    <p class="text-lg">{{tab.overview}}</p>
+                    <a href="{{tab.cta.url}}" class="tracking-wider underline-offset-4 flex items-center text-slate-600 font-medium hover:text-slate-800 hover:font-medium hover:underline">{{tab.cta.text}}
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="ml-1 w-5 h-5">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <div class="flex flex-col border-l border-slate-600 pl-4 mt-2 mb-4">
+                        <h4 class="text-xl font-semibold">Resources</h4>
+                        {% for resource in tab.resources %}
+                            <a href="{{resource.url}}" class="text-sm my-1 hover:underline underline-offset-2  inline-flex items-center text-slate-500 font-medium hover:text-slate-800">
+                                <span class="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3">
+                                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                                    </svg>
+                                </span>
+                                <span class="ml-2">{{resource.text}}</span>
+                            </a>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                {% if tab.img %}
+                    <div class="h-full max-w-sm mt-5 md:mt-0 rounded-lg overflow-hidden place-self-center">
+                        {% image tab.img.src, solution.img.alt%}
+                    </div>
+                    {%else%}
+                    <div class="bg-gradient-to-b md:bg-gradient-to-r rounded-md w-full p-8 flex {{tab.gradient}}">
+                        {# {% image tab.icon, 'abstrace wireframe representing web application development'%} #}
+                    </div>
+                {% endif %}
+            </div>
+
+        </div>
+    {% endfor %}
+</section>

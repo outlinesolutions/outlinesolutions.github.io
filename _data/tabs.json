@@ -1,0 +1,142 @@
+[
+  {
+    "title": "Discovery",
+    "number": "1",
+    "overview": "In the discovery stage, we work closely with you to understand your business goals, processes, and pain points. We'll identify the specific challenges that you're facing and determine how we can help you overcome them through the use of our software solutions.",
+    "slug": "discovery",
+    "cta": {
+      "text": "Learn More",
+      "url": "/phases/the-discovery-process"
+    },
+    "resources": [
+      {
+        "text": "How to Plan For Success",
+        "url": "/blog/how-to-plan-for-a-successful-project",
+        "type": "page"
+      },
+      {
+        "text": "Modernizing an Established Business",
+        "url": "/blog/modernizing-an-established-business",
+        "type": "page"
+      },
+      {
+        "text": "Common Misunderstandings around Software Development",
+        "url": "/blog/common-misunderstandings-around-software-development",
+        "type": "page"
+      },
+      {
+        "text": "Calculating the ROI for Software Adoption",
+        "url": "/blog/calculating-the-roi-for-software-adoption",
+        "type": "page"
+      }
+    ],
+    "gradient": "from-pink-50/10 to-pink-200/50",
+    "icon": "marketing.svg"
+  },
+  {
+    "title": "Development",
+    "number": "2",
+    "overview": "In the development stage, we'll begin building your customized software solution based on your specific needs and requirements. This involves creating a detailed project plan, designing the solution, and developing the software.",
+    "slug": "development",
+    "cta": {
+      "text": "Learn More",
+      "url": "/phases/the-development-process"
+    },
+    "resources": [
+      {
+        "text": "What is Data?",
+        "url": "/blog/what-is-data",
+        "type": "page"
+      },
+      {
+        "text": "Complexity is the Enemy of Success",
+        "url": "/blog/complexity-is-the-enemy-of-success",
+        "type": "page"
+      },
+      {
+        "text": "Our Approach to Design",
+        "url": "/blog/our-approach-to-design",
+        "type": "page"
+      },
+      {
+        "text": "Teams of One",
+        "url": "/blog/teams-of-one",
+        "type": "page"
+      }
+    ],
+    "gradient": "from-blue-50/10 to-blue-200/50",
+    "icon": "marketing.svg"
+  },
+  {
+    "title": "Testing",
+    "number": "3",
+    "overview": "Once the software solution is built, we'll move into the testing stage. We will thoroughly test the solution to ensure that it meets your requirements and works as expected. We'll also make any necessary tweaks or adjustments based on your feedback.",
+    "slug": "testing",
+    "cta": {
+      "text": "Learn More",
+      "url": "/phases/the-testing-process"
+    },
+    "resources": [
+      {
+        "text": "Testing 101",
+        "url": "/blog/testing-101",
+        "type": "page"
+      }
+    ],
+    "gradient": "from-yellow-50/10 to-yellow-200/50",
+    "icon": "marketing.svg"
+  },
+  {
+    "title": "Launch",
+    "number": "4",
+    "overview": "Once testing is complete and you're satisfied with the solution, we'll launch it for your business. We'll provide training and support to ensure that your team is able to use the solution effectively and efficiently.",
+    "slug": "launch",
+    "cta": {
+      "text": "Learn More",
+      "url": "/phases/the-launch-process"
+    },
+    "resources": [
+      {
+        "text": "Creating a Public Launch Strategy",
+        "url": "/blog/creating-a-public-launch-strategy",
+        "type": "page"
+      },
+      {
+        "text": "Creating an Internal Launch Strategy",
+        "url": "/blog/creating-an-internal-launch-strategy",
+        "type": "page"
+      }
+    ],
+    "gradient": "from-green-50/10 to-green-200/50",
+    "icon": "marketing.svg"
+  },
+  {
+    "title": "Maintenance",
+    "number": "5",
+    "overview": "After launch, we'll continue to provide ongoing maintenance and support to ensure that the solution continues to meet your needs and stays up-to-date with any changes to your business processes or requirements.",
+    "slug": "maintenance",
+    "cta": {
+      "text": "Learn More",
+      "url": "/phases/the-maintenance-process"
+    },
+    "resources": [
+      {
+        "text": "Maintaining Your Software",
+        "url": "/blog/maintaining-your-software",
+        "type": "page"
+      },
+      {
+        "text": "An Introduction to Documentation and Support",
+        "url": "/blog/an-introduction-to-documentation-and-support",
+        "type": "page"
+      },
+      {
+        "text": "Optimizing Your Software",
+        "url": "/blog/optimizing-your-software",
+        "type": "page"
+      }
+    ],
+    "gradient": "from-purple-50/10 to-purple-200/50",
+    "icon": "marketing.svg"
+  }
+]

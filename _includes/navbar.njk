@@ -1,0 +1,69 @@
+<header class="sticky top-0 py-4 transition-all duration-500 z-50 w-full transform"
+    x-data="{
+            prevScrollPos: 0,
+            hideNavBar: false,
+            mobileMenu: window.innerWidth < 768,
+            open: window.innerWidth > 768,
+            toggle() {
+                if (window.innerWidth > 768) return
+                if (this.open) {
+                    return this.close()
+                }
+ 
+                this.$refs.button.focus()
+ 
+                this.open = true
+            },
+            close(focusAfter) {
+                if (window.innerWidth > 768) return
+                if (! this.open) return
+ 
+                this.open = false
+ 
+                focusAfter && focusAfter.focus()
+            }
+        }"
+     x-init="window.addEventListener('scroll', () => {
+    hideNavBar = window.scrollY > prevScrollPos && window.scrollY > 100 && (!open || !mobileMenu);
+    prevScrollPos = window.scrollY;
+    });"
+    :class="{ '-translate-y-full': hideNavBar }"
+    x-on:keydown.escape.prevent.stop="close($refs.button)"
+    x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
+    x-on:resize.window="window.innerWidth > 768 ? open = true : open = false"
+    x-id="['dropdown-button']">
+    <nav class="transition-all duration-500 border border-slate-800 p-2 px-4 overflow-hidden mx-4 backdrop-blur-lg bg-slate-50/80 grid md:flex justify-between items-center" >
+        <div class="flex items-center">
+            <a href="/" class="text-2xl h-10 w-full flex">
+                {# <span class="absolute left-3 border-2 border-r-0 border-slate-800 w-10 h-10"></span> #}
+                <span class=" place-self-center">Outline</span>
+                <span class="place-self-center font-thin">Solutions</span>
+            </a>
+            <button
+            x-ref="button"
+            x-on:click="toggle()"
+            :aria-expanded="open"
+            :aria-controls="$id('dropdown-button')"
+            type="button"
+            class="md:hidden absolute right-4 flex items-center"
+        >
+            Menu
+        </button>
+        </div>
+
+        <div class="flex items-center w-full mt-4 md:mt-0"
+            x-ref="panel"
+            x-show="open"
+            x-transition.origin.top.left
+            x-on:click.outside="close($refs.button)"
+            :id="$id('dropdown-button')"
+            style="display: none;">
+            <div class="grid md:grid-flow-col gap-4 -ml-2 md:ml-auto items-center">
+
+                {% for item in navitems %}
+                    <a href="{{ item.url }}" class="link transition-all border-b-slate-800 cursor-pointer px-2" x-bind:class="{'rounded-md hover:ring-2 ring-slate-800 ring-offset-2 px-4 py-2 bg-slate-800 text-slate-50': {{item.highlight}}, 'hover:border-b-2': {{item.highlight !== true}}}">{{ item.title }}</a>
+                {% endfor %}
+            </div>
+        </div>
+    </nav>
+</header>

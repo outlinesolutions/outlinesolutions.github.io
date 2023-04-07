@@ -1,0 +1,71 @@
+[
+  {
+    "title": "What services do you offer?",
+    "content": "We offer custom software development, IT consulting, cloud-based solutions, and marketing site design and development services to small and mid-sized businesses.",
+    "related": []
+  },
+  {
+    "title": "What industries do you service?",
+    "content": "At Outline Solutions, we are industry agnostic. Instead, we take pride in our capability to create tailored software solutions for a diverse range of businesses, no matter the industry they operate in. Our proficiency in software development and our capacity to comprehend our clients' specific needs and objectives enables us to deliver top-notch solutions that boost efficiency, productivity, and growth for their businesses regardless of their industry.",
+    "related": [
+      {
+        "title": "Our Ideal Client",
+        "url": "/blog/our-ideal-client"
+      }
+    ]
+  },
+  {
+    "title": "How much will it cost?",
+    "content": "Our pricing depends on the specific project requirements, and we provide a unique fixed cost, fixed time model for our software development projects. This means you'll know exactly how much your project will cost upfront, with no hidden fees or surprises. We aim to keep the cost between $25,000 and $100,000.",
+    "related": [
+      {
+        "title": "Fixed Cost, Fixed Time Model",
+        "url": "/blog/fixed-cost-fixed-time-model"
+      }
+    ]
+  },
+  {
+    "title": "How long does a typical project take?",
+    "content": "The timeline for a project depends on its complexity and scope, but our fixed cost, fixed time model ensures that you'll have a clear timeline for completion upfront. We aim for projects to take between 1 and 6 months.",
+    "related": []
+  },
+  {
+    "title": "How do you ensure the quality of your work?",
+    "content": "We have a rigorous quality assurance process in place that involves testing and debugging throughout the development cycle to ensure that our solutions meet your specific needs and requirements.",
+    "related": []
+  },
+  {
+    "title": "Can you provide references or examples of past projects?",
+    "content": "As a new business, we have a bit of a catch-22 without any past projects to share as references yet. We understand that trust is important, especially when working with a new business, so we encourage you to schedule a consultation with us to learn more about our services. Additionally see our milestone based payment structure below as another way were working to mitigate risk and complexity. We're confident that we can provide you with the solutions you need to achieve your business goals and are committed to delivering high-quality software solutions that meet your unique needs and requirements.",
+    "related": []
+  },
+  {
+    "title": "When is Payment Due?",
+    "content": "Our payment plan is based on milestones achieved during the project. This payment structure allows you to pay for the work completed in stages, providing assurance that progress is being made and the project is on track. The structure is as follows:<br> 1. Initial consultation and project scope agreement: 25% of the total project cost upfront.<br>2. Design and development: 50% of the total project cost upon completion of design and development.<br>3. Testing and finalization: 25% of the total project cost upon completion of testing and finalization.",
+    "related": []
+  },
+  {
+    "title": "How do you handle project communication and updates?",
+    "content": "We provide regular project updates and communicate with clients via email, phone, or video conferencing depending on their preferences.",
+    "related": []
+  },
+  {
+    "title": "Do you offer ongoing maintenance and support after project completion?",
+    "content": "Yes, we offer ongoing maintenance and support to ensure that your software solutions continue to meet your business needs. Support for the first month after project completion is included in the initial project scope and cost. Support and maintenance thereafter is subject to an additional agreement which we will discuss during our initial conversations, prior to development.",
+    "related": []
+  },
+  {
+    "title": "How do you ensure the security of my data and information?",
+    "content": "We use industry-standard security protocols and technologies to protect your data and information.",
+    "related": []
+  },
+  {
+    "title": "How can I get started with Outline Solutions?",
+    "content": "You can get started by contacting us through our website or by phone to schedule a consultation. We'll work with you to understand your specific needs and requirements and provide a customized solution that meets your business goals.",
+    "related": [],
+    "cta": {
+      "title": "Contact Us",
+      "url": "/contact"
+    }
+  }
+]
