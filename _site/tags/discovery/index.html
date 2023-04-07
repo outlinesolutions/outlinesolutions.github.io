@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      Outline Solutions
+    </title>
+    <meta charset="UTF-8"/>
+    
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
+    <link rel="stylesheet" href="/style.css?v=1680897992936"/>
+    
+    <script defer src="/js/alpine.js?v=1680897992936"></script>
+  </head>
+  <body class="bg-slate-50">
+    <div class="min-h-screen flex flex-col text-slate-800">
+      <div class="flex-1">
+        <header class="sticky top-0 py-4 transition-all duration-500 z-50 w-full transform"
+    x-data="{
+            prevScrollPos: 0,
+            hideNavBar: false,
+            mobileMenu: window.innerWidth < 768,
+            open: window.innerWidth > 768,
+            toggle() {
+                if (window.innerWidth > 768) return
+                if (this.open) {
+                    return this.close()
+                }
+ 
+                this.$refs.button.focus()
+ 
+                this.open = true
+            },
+            close(focusAfter) {
+                if (window.innerWidth > 768) return
+                if (! this.open) return
+ 
+                this.open = false
+ 
+                focusAfter && focusAfter.focus()
+            }
+        }"
+     x-init="window.addEventListener('scroll', () => {
+    hideNavBar = window.scrollY > prevScrollPos && window.scrollY > 100 && (!open || !mobileMenu);
+    prevScrollPos = window.scrollY;
+    });"
+    :class="{ '-translate-y-full': hideNavBar }"
+    x-on:keydown.escape.prevent.stop="close($refs.button)"
+    x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
+    x-on:resize.window="window.innerWidth > 768 ? open = true : open = false"
+    x-id="['dropdown-button']">
+    <nav class="transition-all duration-500 border border-slate-800 p-2 px-4 overflow-hidden mx-4 backdrop-blur-lg bg-slate-50/80 grid md:flex justify-between items-center" >
+        <div class="flex items-center">
+            <a href="/" class="text-2xl h-10 w-full flex">
+                
+                <span class=" place-self-center">Outline</span>
+                <span class="place-self-center font-thin">Solutions</span>
+            </a>
+            <button
+            x-ref="button"
+            x-on:click="toggle()"
+            :aria-expanded="open"
+            :aria-controls="$id('dropdown-button')"
+            type="button"
+            class="md:hidden absolute right-4 flex items-center"
+        >
+            Menu
+        </button>
+        </div>
+
+        <div class="flex items-center w-full mt-4 md:mt-0"
+            x-ref="panel"
+            x-show="open"
+            x-transition.origin.top.left
+            x-on:click.outside="close($refs.button)"
+            :id="$id('dropdown-button')"
+            style="display: none;">
+            <div class="grid md:grid-flow-col gap-4 -ml-2 md:ml-auto items-center">
+
+                
+                    <a href="/" class="link transition-all hover:border-b-2 border-b-slate-800 cursor-pointer px-2" x-bind:class="{ 'rounded-lg hover:ring-2 hover:border-b-0 ring-slate-800 ring-offset-2 px-4 py-2 bg-slate-800 text-slate-50': false}">Home</a>
+                
+                    <a href="/about" class="link transition-all hover:border-b-2 border-b-slate-800 cursor-pointer px-2" x-bind:class="{ 'rounded-lg hover:ring-2 hover:border-b-0 ring-slate-800 ring-offset-2 px-4 py-2 bg-slate-800 text-slate-50': false}">About</a>
+                
+                    <a href="/#contact" class="link transition-all hover:border-b-2 border-b-slate-800 cursor-pointer px-2" x-bind:class="{ 'rounded-lg hover:ring-2 hover:border-b-0 ring-slate-800 ring-offset-2 px-4 py-2 bg-slate-800 text-slate-50': false}">Contact</a>
+                
+                    <a href="/blog" class="link transition-all hover:border-b-2 border-b-slate-800 cursor-pointer px-2" x-bind:class="{ 'rounded-lg hover:ring-2 hover:border-b-0 ring-slate-800 ring-offset-2 px-4 py-2 bg-slate-800 text-slate-50': false}">Blog</a>
+                
+                    <a href="/projects" class="link transition-all hover:border-b-2 border-b-slate-800 cursor-pointer px-2" x-bind:class="{ 'rounded-lg hover:ring-2 hover:border-b-0 ring-slate-800 ring-offset-2 px-4 py-2 bg-slate-800 text-slate-50': false}">Projects</a>
+                
+                    <a href="/#contact" class="link transition-all hover:border-b-2 border-b-slate-800 cursor-pointer px-2" x-bind:class="{ 'rounded-lg hover:ring-2 hover:border-b-0 ring-slate-800 ring-offset-2 px-4 py-2 bg-slate-800 text-slate-50': true}">Contact Us</a>
+                
+            </div>
+        </div>
+    </nav>
+</header>
+        
+          <h1>Tagged “discovery”</h1>
+
+
+
+	<div class="postlist-item">
+		<article class="flex flex-col items-start justify-between">
+			<div class="relative w-full">
+				
+				<div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
+			</div>
+			<div class="max-w-xl">
+				<div class="mt-8 flex items-center gap-x-4 text-xs">
+					<time datetime="2023-03-03" class="text-gray-500">March 2023</time>
+					
+				</div>
+				<div class="group relative">
+					<h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+						<a href="/phases/the-testing-process/">
+							<span class="absolute inset-0"></span>
+							The Testing Process
+						</a>
+					</h3>
+					<p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600"></p>
+				</div>
+				<div class="relative mt-8 flex items-center gap-x-4">
+					<img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="h-10 w-10 rounded-full bg-gray-100">
+					<div class="text-sm leading-6">
+						<p class="font-semibold text-gray-900">
+							<a href="#">
+								<span class="absolute inset-0"></span>
+                  Yosef Serkez
+                </a>
+						</p>
+						<p class="text-gray-600">Founder</p>
+					</div>
+				</div>
+			</div>
+		</article>
+
+	</div>
+
+	<div class="postlist-item">
+		<article class="flex flex-col items-start justify-between">
+			<div class="relative w-full">
+				
+				<div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
+			</div>
+			<div class="max-w-xl">
+				<div class="mt-8 flex items-center gap-x-4 text-xs">
+					<time datetime="2023-03-01" class="text-gray-500">March 2023</time>
+					
+				</div>
+				<div class="group relative">
+					<h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+						<a href="/phases/the-discovery-process/">
+							<span class="absolute inset-0"></span>
+							The Discovery Process
+						</a>
+					</h3>
+					<p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600"></p>
+				</div>
+				<div class="relative mt-8 flex items-center gap-x-4">
+					<img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="h-10 w-10 rounded-full bg-gray-100">
+					<div class="text-sm leading-6">
+						<p class="font-semibold text-gray-900">
+							<a href="#">
+								<span class="absolute inset-0"></span>
+                  Yosef Serkez
+                </a>
+						</p>
+						<p class="text-gray-600">Founder</p>
+					</div>
+				</div>
+			</div>
+		</article>
+
+	</div>
+
+
+<p>See <a href="/tags/">all tags</a>.</p>
+        
+        <footer class="border border-slate-800 py-4 p-2 px-4 mx-4 mt-24 " aria-labelledby="footer-heading">
+    <h2 id="footer-heading" class="sr-only">Footer</h2>
+    <div class="mx-auto max-w-7xl pb-4">
+        <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+            <div class="">
+                <a href="/" class="text-2xl h-10 w-full flex">
+                    
+                    <span class=" place-self-center">Outline</span>
+                    <span class="place-self-center font-thin">Solutions</span>
+                </a>
+                <p class="text-sm leading-6 ">Streamline, simplify, succeed.</p>
+                
+            </div>
+            <div class="mt-8 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+                <div class="md:grid md:grid-cols-2 md:gap-8">
+                    <div>
+                        <h3 class="text-sm font-semibold leading-6">Solutions</h3>
+                        <ul role="list" class="mt-6 space-y-2">
+                            <li>
+                                <a href="#" class="text-sm leading-6">Marketing</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-sm leading-6">Analytics</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-sm leading-6">Commerce</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-sm leading-6">Insights</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-10 md:mt-0">
+                        <h3 class="text-sm font-semibold">Resources</h3>
+                        <ul role="list" class="mt-6 space-y-2">
+
+                            <li>
+                                <a href="#" class="text-sm leading-6">Documentation</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-sm leading-6">Guides</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="md:grid md:grid-cols-2 md:gap-8">
+                    <div>
+                        <h3 class="text-sm font-semibold">Company</h3>
+                        <ul role="list" class="mt-6 space-y-2">
+                            <li>
+                                <a href="#" class="text-sm leading-6">About</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-sm leading-6">Blog</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="mt-4 border-t border-slate-100/10 pt-8">
+            <p class="text-xs leading-5 text-slate-500">&copy; 2023 Outline Solutions, Inc. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+<div class="h-8 bg-gradient-to-t from-slate-50 sticky bottom-0 w-full "></div>
+      </div>
+    </body>
+  </html>
