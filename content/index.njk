@@ -4,13 +4,16 @@
 
 {% block content %}
     <div class="w-full grid justify-center p-8">
-        <div class="font-extrabold text-2xl md:text-4xl tracking-wide mx-auto p-8 py-16 md:py-32 mb-12 bg-slate-800 text-sky-50	">
-            <p>
+        <div class="relative font-extrabold text-2xl md:text-4xl tracking-wide mx-auto p-8 py-16 md:py-32 mb-12 bg-slate-800 text-sky-50	">
+            <p class="w-10/12 md:w-6/12">
                 <span class="font-normal">
                 We create user-friendly and affordable software to simplify complex processes and workflows.
                 </span>
                 <span>Helping small to mid-sized businesses stay organized and efficient.</span>
             </p>
+            <div class="absolute -bottom-12  -right-4 w-36 md:w-96 ring-slate-800 ring-4 ring-offset-2 rounded overflow-hidden">
+                {% image 'header.jpg', 'developing software'%}
+            </div>
         </div>
     </div>
 

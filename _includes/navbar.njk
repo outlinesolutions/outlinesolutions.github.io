@@ -32,37 +32,43 @@
     x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
     x-on:resize.window="window.innerWidth > 768 ? open = true : open = false"
     x-id="['dropdown-button']">
-    <nav class="transition-all duration-500 border border-slate-800 p-2 px-4 overflow-hidden mx-4 backdrop-blur-lg bg-slate-50/80 grid md:flex justify-between items-center" >
-        <div class="flex items-center">
-            <a href="/" class="text-2xl h-10 w-full flex">
-                {# <span class="absolute left-3 border-2 border-r-0 border-slate-800 w-10 h-10"></span> #}
-                <span class=" place-self-center">Outline</span>
-                <span class="place-self-center font-thin">Solutions</span>
-            </a>
-            <button
+    <nav class="transition-all duration-500 border border-slate-800 p-2 px-4 overflow-hidden mx-4 backdrop-blur-lg bg-slate-50/80 flex justify-between items-center" >
+        <div class="grid md:flex flex-grow">
+            <div class="flex items-center w-full">
+                <a href="/" class="text-2xl h-10 w-full flex flex-grow">
+                    {# <span class="absolute left-3 border-2 border-r-0 border-slate-800 w-10 h-10"></span> #}
+                    <span class=" place-self-center">Outline</span>
+                    <span class="place-self-center font-thin">Solutions</span>
+                </a>
+                <button
             x-ref="button"
             x-on:click="toggle()"
             :aria-expanded="open"
             :aria-controls="$id('dropdown-button')"
             type="button"
-            class="md:hidden absolute right-4 flex items-center"
+            class="md:hidden flex items-center ml-auto"
         >
-            Menu
-        </button>
-        </div>
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3 6C3 5.44772 3.44772 5 4 5H20C20.5523 5 21 5.44772 21 6C21 6.55228 20.5523 7 20 7H4C3.44772 7 3 6.55228 3 6ZM3 12C3 11.4477 3.44772 11 4 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H4C3.44772 13 3 12.5523 3 12ZM3 18C3 17.4477 3.44772 17 4 17H20C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H4C3.44772 19 3 18.5523 3 18Z" fill="#0F1729"/>
+                    </svg>
+                </button>
+            </div>
 
-        <div class="flex items-center w-full mt-4 md:mt-0"
+            <div class="flex items-center w-full mt-4 md:mt-0"
             x-ref="panel"
             x-show="open"
             x-transition.origin.top.left
             x-on:click.outside="close($refs.button)"
             :id="$id('dropdown-button')"
             style="display: none;">
-            <div class="grid md:grid-flow-col gap-4 -ml-2 md:ml-auto items-center">
+                <div class="grid md:grid-flow-col gap-4 -ml-2 md:ml-auto items-center">
 
-                {% for item in navitems %}
-                    <a href="{{ item.url }}" class="link transition-all border-b-slate-800 cursor-pointer px-2" x-bind:class="{'rounded-md hover:ring-2 ring-slate-800 ring-offset-2 px-4 py-2 bg-slate-800 text-slate-50': {{item.highlight}}, 'hover:border-b-2': {{item.highlight !== true}}}">{{ item.title }}</a>
-                {% endfor %}
+                    {% for item in navitems %}
+                        <a href="{{ item.url }}" class="link transition-all border-b-slate-800 cursor-pointer px-2" x-bind:class="{'rounded-md hover:ring-2 ring-slate-800 ring-offset-2 px-4 py-2 bg-slate-800 text-slate-50': {{item.highlight}}, 'hover:border-b-2': {{item.highlight !== true}}}">{{ item.title }}</a>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </nav>
