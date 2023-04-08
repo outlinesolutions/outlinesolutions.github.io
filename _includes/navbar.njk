@@ -32,7 +32,7 @@
     x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
     x-on:resize.window="window.innerWidth > 768 ? open = true : open = false"
     x-id="['dropdown-button']">
-    <nav class="transition-all duration-500 border border-slate-800 p-2 px-4 overflow-hidden mx-4 backdrop-blur-lg bg-slate-50/80 flex justify-between items-center" >
+    <nav class="transition-all duration-500 rounded border border-slate-800 p-2 px-4 overflow-hidden mx-4 backdrop-blur-lg bg-slate-50/80 flex justify-between items-center" >
         <div class="grid md:flex flex-grow">
             <div class="flex items-center w-full">
                 <a href="/" class="text-2xl h-10 w-full flex flex-grow">
