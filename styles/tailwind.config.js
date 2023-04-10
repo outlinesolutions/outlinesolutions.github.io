@@ -5,7 +5,11 @@ module.exports = {
     fontFamily: {
       sans: ["Schibsted Grotesk", "sans-serif"],
     },
-    extend: {},
+    extend: {
+      colors: {
+        white: "#fffcf2",
+      },
+    },
   },
   plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms")],
 };
