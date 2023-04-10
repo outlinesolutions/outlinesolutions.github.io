@@ -4,21 +4,25 @@
 
 {% block content %}
     <div class="w-full grid justify-center p-8">
-        <div class="relative font-extrabold text-2xl md:text-4xl tracking-wide mx-auto p-8 py-16 md:py-32 mb-12 bg-slate-800 text-sky-50	">
-            <p class="w-10/12 md:w-6/12">
+        <div class="grid gap-8 md:grid-cols-3 font-extrabold text-2xl md:text-4xl tracking-wide mx-auto p-4 items-center md:mb-12 bg-gradient-to-r -lg from-violet-100/50 to-cyan-50/50  border-slate-800	">
+            <p class="col-span-2">
                 <span class="font-normal">
                 User-friendly and affordable software to simplify complex processes and workflows.
                 </span>
                 <span>Helping small to mid-sized businesses stay organized and efficient.</span>
             </p>
-            <div class="absolute -bottom-12  -right-4 w-36 md:w-96 ring-slate-800 ring-4 ring-offset-2 rounded overflow-hidden">
-                {% image 'header.jpg', 'developing software'%}
+            <div class="hidden md:block opacity-80 w-full overflow-hidden">
+                {% image 'contact.jpg', 'developing software'%}
             </div>
         </div>
     </div>
+    <div class="md:hidden opacity-80  w-full overflow-hidden">
+        {% image 'contact.jpg', 'developing software'%}
+    </div>
 
     <div class="m-8 grid gap-24">
-        <div class="rounded grid gap-8" id="solutions">
+
+        <div class=" grid gap-8" id="solutions">
             <div>
                 <h2 class="font-thinner tracking-wider flex w-full">
                     <div class="text-4xl">Solutions</div>
@@ -26,7 +30,7 @@
                 </h2>
                 <div class="font-thin flex w-full">
                     {# <div class="text-4xl text-transparent">Solutions</div> #}
-                    <p class="t font-thin flex-grow ">We offer a wide range of software solutions to help local businesses thrive. Whether you're looking for a custom software solution or a pre-built solution, we can help.</p>
+                    <p class="font-thin flex-grow ">We offer a wide range of software solutions to help local businesses thrive. Whether you're looking for a custom software solution or a pre-built solution, we can help.</p>
                 </div>
             </div>
             <div class="">
@@ -34,14 +38,14 @@
             </div>
         </div>
 
-        <div class="rounded grid gap-4" id="process">
+        <div class=" grid gap-4" id="process">
             <div>
                 <h2 class="font-thinner tracking-wider flex w-full">
                     <div class="text-4xl">Process</div>
                     <span class="border-b-4 border-slate-800 ml-2 flex-grow mb-2"></span>
                 </h2>
                 <div class="font-thin flex w-full">
-                    <p class="t font-thin flex-grow ">At its core, our relationship is split into 6 phases. Each phase has a clear goal and is designed to make progress towards answering big questions and validating big ideas. Each phase is flexible and there is lots of room to experiment with different techniques.</p>
+                    <p class="font-thin flex-grow ">At its core, our relationship is split into 6 phases. Each phase has a clear goal and is designed to make progress towards answering big questions and validating big ideas. Each phase is flexible and there is lots of room to experiment with different techniques.</p>
                 </div>
             </div>
             <div class="">
@@ -49,7 +53,32 @@
             </div>
         </div>
 
-        <div class="rounded grid gap-4" id="faq">
+        <div class=" grid gap-8" id="about">
+            <div class="flex-wrap flex">
+                <h2 class="font-thinner tracking-wider flex w-full flex-wrap">
+                    <div class="text-4xl mr-2">Who you'll work with</div>
+                    <span class="border-b-4 border-slate-800 flex-grow mb-2"></span>
+                </h2>
+                <div class="font-thin flex w-full flex-grow">
+                    {# <div class="text-4xl text-transparent">Solutions</div> #}
+                    {# <p class="t font-thin flex-grow ">Meet us.</p> #}
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-4">
+                {# {% include 'solutions.njk'%} #}
+                <div class="w-full  overflow-hidden table opacity-80 ">
+                    {% image 'me-2.jpeg', 'Yosef bio photo'%}
+                </div>
+                <p class="col-span-2 text-normal">Meet Yosef Serkez, a seasoned software engineer and consultant with a passion for helping local businesses. With over five years of experience in software development, integrations and adoptions, Yosef has advised a diverse range of companies, from small businesses to enterprise giants like L'Occitane and Salesforce.
+
+Yosef is committed to simplifying complex software solutions for his clients, reducing unnecessary complexity and streamlining processes. He takes pride in his ability to understand his clients' needs and provide customized solutions that help them achieve their goals efficiently.
+
+Beyond his work in the software industry, Yosef enjoys hiking in his free time. He recently completed the Pacific Crest Trail, a 2,650-mile trek that spans from Mexico to Canada. This passion for the outdoors reflects his desire for simplicity and reducing complexity in all aspects of his life.</p>
+            </div>
+        </div>
+
+        <div class=" grid gap-4" id="faq">
             <div>
                 <h2 class="font-thinner tracking-wider flex w-full">
                     <div class="text-4xl">FAQ</div>
@@ -64,7 +93,7 @@
             </div>
         </div>
 
-        <div class="rounded grid gap-4" id="faq">
+        <div class=" grid gap-4" id="faq">
             <div>
                 <h2 class="font-thinner tracking-wider flex w-full">
                     <div class="text-4xl">Contact</div>

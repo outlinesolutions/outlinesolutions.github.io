@@ -17,7 +17,7 @@
         x-transition:enter-end="opacity-100 scale-100"
         >
 
-            <div class="col-span-3 border hover:border-solid transition-all border-slate-800 shadow rounded p-4 py-6 md:grid md:grid-cols-3 gap-8  ">
+            <div class="col-span-3 border hover:border-solid transition-all border-slate-800 shadow  p-4 py-6 md:grid md:grid-cols-3 gap-8  ">
                 <div class="col-span-2  grid gap-2">
                     <h2 class="text-3xl font-bold">Overview of {{tab.title}}</h2>
                     <p class="text-lg">{{tab.overview}}</p>
@@ -42,11 +42,11 @@
                 </div>
 
                 {% if tab.img %}
-                    <div class="h-full max-w-sm mt-5 md:mt-0 rounded-lg overflow-hidden place-self-center">
+                    <div class="h-full max-w-sm mt-5 md:mt-0 -lg overflow-hidden place-self-center">
                         {% image tab.img.src, solution.img.alt%}
                     </div>
                     {%else%}
-                    <div class="bg-gradient-to-b md:bg-gradient-to-r rounded-md w-full p-8 flex {{tab.gradient}}">
+                    <div class="bg-gradient-to-b md:bg-gradient-to-r -md w-full p-8 flex {{tab.gradient}}">
                         {# {% image tab.icon, 'abstrace wireframe representing web application development'%} #}
                     </div>
                 {% endif %}

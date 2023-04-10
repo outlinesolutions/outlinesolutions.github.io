@@ -3,7 +3,7 @@ module.exports = {
   safelist: [],
   theme: {
     fontFamily: {
-      sans: ["Lab Grotesque", "sans-serif"],
+      sans: ["Schibsted Grotesk", "sans-serif"],
     },
     extend: {},
   },

@@ -1,12 +1,10 @@
-<footer class="border border-slate-800 py-4 p-2 px-4 mx-4 mt-24 " aria-labelledby="footer-heading">
+<footer class="border border-slate-800 py-4 p-2 px-4 mx-8 -md mt-24 " aria-labelledby="footer-heading">
     <h2 id="footer-heading" class="sr-only">Footer</h2>
     <div class="mx-auto max-w-7xl pb-4">
         <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-            <div class="">
-                <a href="/" class="text-2xl h-10 w-full flex">
-                    {# <span class="absolute left-3 border-2 border-r-0 border-slate-800 w-10 h-10"></span> #}
-                    <span class=" place-self-center">Outline</span>
-                    <span class="place-self-center font-thin">Solutions</span>
+            <div class="flex flex-col items-start w-full">
+                <a href="/" class="text-2xl w-32">
+                    {% image 'logo.svg', 'logo'%}
                 </a>
                 <p class="text-sm leading-6 ">Streamline, simplify, succeed.</p>
                 {# <div class="flex space-x-6">
@@ -50,7 +48,7 @@
                 <div class="md:grid md:grid-cols-2 md:gap-8">
                     <div>
                         <h3 class="text-sm font-semibold leading-6">Solutions</h3>
-                        <ul role="list" class="mt-6 space-y-2">
+                        <ul role="list" class="mt-4 space-y-2">
                             {% for solution in primarysolutions %}
                                 <li>
                                     <a href="{{ solution.cta.url }}" class="text-sm leading-6">{{ solution.title }}</a>
@@ -65,7 +63,7 @@
                     </div>
                     <div class="mt-10 md:mt-0">
                         <h3 class="text-sm font-semibold">Resources</h3>
-                        <ul role="list" class="mt-6 space-y-2">
+                        <ul role="list" class="mt-4 space-y-2">
 
                             <li>
                                 <a href="/blog" class="text-sm leading-6">Blog</a>
