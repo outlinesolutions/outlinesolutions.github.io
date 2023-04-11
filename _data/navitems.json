@@ -5,6 +5,21 @@
     "highlight": false
   },
   {
+    "title": "Process",
+    "url": "/#process",
+    "highlight": false
+  },
+  {
+    "title": "Team",
+    "url": "/#team",
+    "highlight": false
+  },
+  {
+    "title": "FAQ",
+    "url": "/#faq",
+    "highlight": false
+  },
+  {
     "title": "Blog",
     "url": "/blog",
     "highlight": false
